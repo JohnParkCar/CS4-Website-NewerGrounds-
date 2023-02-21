@@ -9,10 +9,32 @@
           rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
           crossorigin="anonymous">
+    <link href="/formStyle.css" rel="stylesheet">
 </head>
 <body style="background-color:Black">
 <br>
 <div class="container text-center">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col">
+            <button onclick="document.getElementById('signUpForm').style.display='block'">Sign Up / Log In</button>
+            <div id="signUpForm" class="modal">
+                <form>
+                    <br>
+                    <label for="uname"><span style="color: #FFFFFF">Username:</span></label><br>
+                    <input type="text" id="uname" name="uname" required><br>
+                    <label for="pword"><span style="color: #FFFFFF">Password:</span></label><br>
+                    <input type="password" id="pword" name="pword" required><br>
+                </form>
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('signUpForm').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signup">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <div class="row">
         <h1 style="font-family:impact; font-size:400%; border:5px solid DodgerBlue;background-color:Black; color:White">
             <img src="FlipEllipseTEST.gif" alt="FlipEllipse" style="float:left;width:80px;height:80px;">
@@ -45,7 +67,31 @@
             <button id='Forum_Videos' type="button"></button>
         </div>
     </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <p style="font-size:150%; font-family:luminari; border:5px solid Orange;background-color:Black; color:White">
+                <span style="font-family:impact; font-size:175%; color:White">So... Why NewerGrounds?</span><br>
+                <img src="TomFulp.png" alt="Tom Fulp, Creator of NewGrounds"><br>
+                The name NewerGrounds stems from the original website, NewGrounds. Our website is intended to function similarly,
+                but NewGrounds has some more neat features. They have games, unlimited games, <br>AND bacon as well. Also, Newgrounds
+                has built-in blog features that the developer, Tom Fulp, uses to update users and highlight special people. Newgrounds
+                also has calendar-events for game jams, art competitions, and more!<br>Also, small unknown fact: While NewGrounds is typically
+                blacklisted on search engines (for both reasonable and unreasonable reasons), most content on the internet originated there.
+                Early internet culture like Homestuck, Ultimate Showdown, and even the earliest YouTube animations all appeared on NewGrounds first!
+            </p>
+        </div>
+        <div class="col">
+            <p style="font-size:150%; font-family:luminari; border:5px solid Orange;background-color:Black; color:White">
+                MmmmmmMMMMmmMMmmmmm<br>MmmmMMMMMMMmmmmm Toilet Bowl hahahahahahahahahahahahahahahahahaha
+            </p>
+            <p style="font-size:150%; font-family:luminari; border:5px solid Orange;background-color:Black; color:White">
+                <img src="ABW2.jfif" alt="The Alaskan Bull Worm">
+            </p>
+        </div>
+    </div>
 </div>
+<script src="daJavaScript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script>
     document.getElementById("Forum_Art").innerHTML = "Art";

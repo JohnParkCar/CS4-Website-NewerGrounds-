@@ -1,0 +1,11 @@
+input[type=text], input[type=password] {
+border: 5px solid White;
+background-color: Black;
+color:White
+}
+
+input[type=button], input[type=submit] {
+border: 5px solid #FFAA6D;
+color: White;
+background-color: Black;
+}
