@@ -18,20 +18,8 @@
         <div class="col"></div>
         <div class="col"></div>
         <div class="col">
-            <button onclick="document.getElementById('signUpForm').style.display='block'">Sign Up / Log In</button>
-            <div id="signUpForm" class="modal">
-                <form>
-                    <br>
-                    <label for="uname"><span style="color: #FFFFFF">Username:</span></label><br>
-                    <input type="text" id="uname" name="uname" required><br>
-                    <label for="pword"><span style="color: #FFFFFF">Password:</span></label><br>
-                    <input type="password" id="pword" name="pword" required><br>
-                </form>
-                <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('signUpForm').style.display='none'" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signup">Submit</button>
-                </div>
-            </div>
+            <button id="Log_In" type="button" onclick="window.location.href='SignInPage.html'">Log In</button>
+            <button id="Sign_In" type="button" onclick="window.location.href='LogInPage.html'">Sign Up</button>
         </div>
     </div>
     <br>
@@ -102,6 +90,10 @@
     document.getElementById("Forum_Text").style="padding:10px 80px; font-size:150%; font-family:gill sans; border:7px solid #00FFFF; background-color:Black; color:White";
     document.getElementById("Forum_Videos").innerHTML = "Videos";
     document.getElementById("Forum_Videos").style="padding:10px 80px; font-size:150%; font-family:gill sans; border:7px solid #FF00FF; background-color:Black; color:White";
-</script>
+    document.getElementById("Sign_In").innerHTML = "Sign Up";
+    document.getElementById("Sign_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #FFA000; background-color:Black; color:White";
+    document.getElementById("Log_In").innerHTML = "Log In";
+    document.getElementById("Log_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #FFA000; background-color:Black; color:White";
+    </script>
 </body>
 </html>
