@@ -13,6 +13,17 @@
 <br>
 <div class="container text-center">
     <div class="row">
+        <div class="col">
+            <button id="Back" type="button" onclick="window.location.href='TestWebsite.html'"></button>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <button id="Log_In" type="button" onclick="window.location.href='SignInPage.html'"></button>
+            <button id="Sign_In" type="button" onclick="window.location.href='LogInPage.html'"></button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
         <h1 style="font-family:impact; font-size:400%; border:5px solid #FF0080;background-color:Black; color:White">
             <img src="BoxColorWheel.gif" alt="BoxColorWheel" style="float:left;width:80px;height:80px;">
             Welcome to the
@@ -23,6 +34,20 @@
             <img src="BoxColorWheel.gif" alt="BoxColorWheel" style="float:right;width:80px;height:80px;">
         </h1>
     </div>
+    <div class="row">
+        <p style="font-size:150%; font-family:luminari; border:5px solid #FF0080;background-color:Black; color:White">
+            Here you can upload any artwork you make! We'd love to see what cool things you can come up with.
+            <br>Don't upload anything not safe for work though, it'll get removed.
+        </p>
+    </div>
 </div>
+<script>
+    document.getElementById("Back").innerHTML = "<--- Back to NewerGrounds";
+    document.getElementById("Back").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #AEA8FF; background-color:Black; color:White";
+    document.getElementById("Sign_In").innerHTML = "Sign Up";
+    document.getElementById("Sign_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #AEA8FF; background-color:Black; color:White";
+    document.getElementById("Log_In").innerHTML = "Log In";
+    document.getElementById("Log_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #AEA8FF; background-color:Black; color:White";
+    </script>
 </body>
 </html>

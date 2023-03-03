@@ -11,6 +11,45 @@
 </head>
 <body style="background-color:Black">
 <br>
-Chill Vibe jammin amirite?
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <button id="Back" type="button" onclick="window.location.href='TestWebsite.html'"></button>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+            <button id="Log_In" type="button" onclick="window.location.href='SignInPage.html'"></button>
+            <button id="Sign_In" type="button" onclick="window.location.href='LogInPage.html'"></button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <h1 style="font-family:impact; font-size:400%; border:5px solid #9AFF6C;background-color:Black; color:White">
+            <img src="Play.gif" alt="Play" style="float:left;width:80px;height:80px;">
+            Welcome to the
+            <span style="color: #7CFF24">M</span>
+            <span style="color: #7CFF69">U</span>
+            <span style="color: #7CFF99">S</span>
+            <span style="color: #7CFFB2">I</span>
+            <span style="color: #7CFFDA">C</span>
+            Forum!
+            <img src="Pause.gif" alt="Pause" style="float:right;width:80px;height:80px;">
+        </h1>
+    </div>
+    <div class="row">
+        <p style="font-size:150%; font-family:luminari; border:5px solid #9AFF6C;background-color:Black; color:White">
+            Chill Vibe Jammin, amirite? Mess around here and hear some tunes that people make,
+            <br>or show us some of your work! It's like spotify but better and worse!
+        </p>
+    </div>
+</div>
+<script>
+    document.getElementById("Back").innerHTML = "<--- Back to NewerGrounds";
+    document.getElementById("Back").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #5DFFB2; background-color:Black; color:White";
+    document.getElementById("Sign_In").innerHTML = "Sign Up";
+    document.getElementById("Sign_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #5DFFB2; background-color:Black; color:White";
+    document.getElementById("Log_In").innerHTML = "Log In";
+    document.getElementById("Log_In").style="padding:5px 20px; font-size:150%; font-family:gill sans; border:7px solid #5DFFB2; background-color:Black; color:White";
+    </script>
 </body>
 </html>
