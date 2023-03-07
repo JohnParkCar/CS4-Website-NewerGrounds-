@@ -10,33 +10,29 @@ if (strlen($_POST["pword"]) < 8) {
 	die("Password must be at least 8 characters");
 }
 
-if (! preg_match("/[a-z]/i", $_POST["pword"])) {
-	die("Password must have at least one letter");
+$host = "localhost";
+$dbname = "user_database";
+$username = "root";
+$password = "";
+
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+if (mysqli_connect_errno()) {
+	die("Connection error: " . mysqli_connect_error());
 }
 
-if (! preg_match("/[0-9]/", $_POST["pword"])) {
-	die("Password must have at least one number");
-}
+$sql = "INSERT INTO tempuserdatabase (uname, pword)
+	VALUE (?, ?)";
 
-$password_hash = password_hash($_POST["pword"], PASSWORD_DEFAULT);
-
-/* Took this stuff and moved it into database.php*/
-
-$mysqli = require __DIR__ . "/database.php";
-
-$sql = "INSERT INTO tempuserdatabase (uname, pword, pword_hash)
-	VALUE (?, ?, ?)";
-
-$stmt = $mysqli->stmt_init();
+$stmt = mysqli_stmt_init($conn);
 
 if ( ! mysqli_stmt_prepare($stmt, $sql)) {
-	die("SQL error: " . mysqli->error);
+	die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "sss",
+mysqli_stmt_bind_param($stmt, "ss",
 				$uname,
-				$pword,
-				$password_hash);
+				$pword);
 
 mysqli_stmt_execute($stmt);
 
